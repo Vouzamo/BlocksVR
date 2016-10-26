@@ -65,8 +65,8 @@ public class SteamVR_Camera : MonoBehaviour
 
 			t.parent = origin;
 
-			while (head.childCount > 0)
-				head.GetChild(0).parent = t;
+            while (head.childCount > 0)
+                head.GetChild(0).SetParent(t, false);
 
 			// Keep the head around, but parent to the camera now since it moves with the hmd
 			// but existing content may still have references to this object.
