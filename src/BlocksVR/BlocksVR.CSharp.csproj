@@ -75,6 +75,7 @@
     <Compile Include="Assets\Scripts\GameState.cs" />
     <Compile Include="Assets\Scripts\LevelGenerator.cs" />
     <Compile Include="Assets\Scripts\LevelManager.cs" />
+    <Compile Include="Assets\Scripts\Models\LevelData.cs" />
     <Compile Include="Assets\Scripts\PlayerManager.cs" />
     <Compile Include="Assets\Scripts\SteamVR_MenuToggle.cs" />
     <Compile Include="Assets\Scripts\UI\ButtonClickQuit.cs" />
