@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class SteamVR_MenuToggle : MonoBehaviour
 {
@@ -19,7 +20,6 @@ public class SteamVR_MenuToggle : MonoBehaviour
     void Update()
     {
         var device = SteamVR_Controller.Input((int)Controller.index);
-
         var showMenu = device.GetTouch(SteamVR_Controller.ButtonMask.ApplicationMenu);
 
         Menu.SetActive(showMenu);
