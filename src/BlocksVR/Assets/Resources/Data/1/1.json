@@ -1,0 +1,85 @@
+{
+    "Name": "Hello World!",
+    "Description": "The very first level... Don't worry, it's pretty simple. All you need to do is hold either trigger to spawn a ball. Release the trigger as you throw the ball towards the blocks. Each block that hits the floor will score a point. You have 3 balls. Good luck!",
+    "Ammo": 30,
+    "Medals": [
+        {
+            "Type": 3,
+            "Score": 6
+        },
+        {
+            "Type": 2,
+            "Score": 4
+        },
+        {
+            "Type": 1,
+            "Score": 2
+        }
+    ],
+    "Blocks": [
+        {
+          "Type": 0,
+          "Position": {
+            "x": -2,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "Type": 0,
+          "Position": {
+            "x": -1,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "Type": 0,
+          "Position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "Type": 0,
+          "Position": {
+            "x": 1,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "Type": 0,
+          "Position": {
+            "x": 2,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "Type": 1,
+          "Position": {
+            "x": -2,
+            "y": 1,
+            "z": 0
+          }
+        },
+        {
+          "Type": 2,
+          "Position": {
+            "x": 0,
+            "y": 1,
+            "z": 0
+          }
+        },
+        {
+          "Type": 3,
+          "Position": {
+            "x": 2,
+            "y": 1,
+            "z": 0
+          }
+        }
+    ]
+}

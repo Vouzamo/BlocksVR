@@ -1,6 +1,6 @@
 // /-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\
 //
-// 							ProtoBlox 1.0, Copyright © 2013, RipCord Development
+// 							ProtoBlox 1.0, Copyright Â© 2013, RipCord Development
 //											 switchTexture.js
 //										    info@ripcorddev.com
 //
@@ -18,7 +18,7 @@ function OnMouseUp () {
 	var demoObjects : GameObject[] = GameObject.FindGameObjectsWithTag("demo");
 	
 	for (var x = 0; x < demoObjects.Length; x++) {
-		demoObjects[x].renderer.material = textures[t];
+		demoObjects[x].GetComponent.<Renderer>().material = textures[t];
 	}
 	if (t < textures.Length - 1) {
 		t++;

@@ -1,6 +1,6 @@
 // /-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\-/-\
 //
-// 							ProtoBlox 1.0, Copyright © 2013, RipCord Development
+// 							ProtoBlox 1.0, Copyright Â© 2013, RipCord Development
 //											buttonBehaviour.js
 //										    info@ripcorddev.com
 //
@@ -20,7 +20,7 @@ var fadeTime : float = 0.25;				//The amount of time it takes for the button col
 function Awake() {
 
 	//Defines the offState colour of the button as the colour it is when the scene starts
-	offState = renderer.material.color;
+	offState = GetComponent.<Renderer>().material.color;
 
 }
 
@@ -37,23 +37,23 @@ function OnMouseExit() {
 
 //Change button to click colour
 function OnMouseDown() {
-	renderer.material.color = clickState;
+	GetComponent.<Renderer>().material.color = clickState;
 }
 
 //This function controls the colour change for the various button states
 function ColourChange(_buttonStates)	{
 
-	var currentColor = renderer.material.color;
+	var currentColor = GetComponent.<Renderer>().material.color;
 	var timeLeft = fadeTime;
 	
 	while (timeLeft > 0) {
 
 		if (_buttonStates == "Over") {
-			renderer.material.color = Color.Lerp(currentColor, overState, (fadeTime - timeLeft) / fadeTime);
+			GetComponent.<Renderer>().material.color = Color.Lerp(currentColor, overState, (fadeTime - timeLeft) / fadeTime);
 		}
 
 		if (_buttonStates == "Off") {
-			renderer.material.color = Color.Lerp(currentColor, offState, (fadeTime - timeLeft) / fadeTime);
+			GetComponent.<Renderer>().material.color = Color.Lerp(currentColor, offState, (fadeTime - timeLeft) / fadeTime);
 		}
 
 		yield;
@@ -65,6 +65,6 @@ function ColourChange(_buttonStates)	{
 
 function OnMouseUp() {
 
-	renderer.material.color = overState;
+	GetComponent.<Renderer>().material.color = overState;
 
 }

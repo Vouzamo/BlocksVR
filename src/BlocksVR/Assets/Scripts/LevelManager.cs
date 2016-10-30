@@ -22,48 +22,30 @@ public class LevelManager : MonoBehaviour {
     public string LevelSelectScene;
     public string LevelScene;
 
-    private LevelData Data;
+    private Level _data;
+    public Level Data {
+        get {
+            if (_data == null)
+            {
+                _data = LoadLevel(State.World, State.Level);
+            }
+
+            return _data;
+        }
+    }
 
     void Start()
     {
         State = GameState.Instance;
-
-        Data = LoadLevelData();
     }
 
-    LevelData LoadLevelData()
+    Level LoadLevel(int world, int level)
     {
-        var json = Resources.Load<TextAsset>(Path.Combine("Data", "levelData"));
+        var levelPath = string.Format("{0}\\{1}", world, level);
 
-        return JsonUtility.FromJson<LevelData>(json.text);
-    }
+        var json = Resources.Load<TextAsset>(Path.Combine("Data", levelPath));
 
-    public bool TryGetWorld(out World world)
-    {
-        world = null;
-
-        if(Data != null && Data.Worlds != null)
-        {
-            world = Data.Worlds.FirstOrDefault(x => x.Id == State.World);
-        }
-        
-        return world != null;
-    }
-
-    public bool TryGetLevel(out Level level)
-    {
-        level = null;
-
-        World world;
-        if(TryGetWorld(out world))
-        {
-            if(world.Levels != null)
-            {
-                level = world.Levels.FirstOrDefault(x => x.Id == State.Level);
-            }
-        }
-
-        return level != null;
+        return JsonUtility.FromJson<Level>(json.text);
     }
 
     public void WorldSelect()
