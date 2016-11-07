@@ -1,0 +1,106 @@
+{
+    "Name": "Let's get explosive",
+    "Description": "Hit an explosive box to... Well, I'll just let you figure that out for yourself.",
+    "Ammo": 30,
+    "Medals": [
+        {
+            "Type": 3,
+            "Score": 4
+        },
+        {
+            "Type": 2,
+            "Score": 3
+        },
+        {
+            "Type": 1,
+            "Score": 2
+        }
+    ],
+    "Blocks": [
+        {
+          "Type": 13,
+          "Position": {
+            "x": 0,
+            "y": 0,
+            "z": 10
+          },
+          "Scale": {
+            "x": 20,
+            "y": 1,
+            "z": 20
+          }
+        },
+        {
+          "Type": 9,
+          "Position": {
+            "x": 0,
+            "y": 1,
+            "z": 8
+          }
+        },
+        {
+          "Type": 8,
+          "Position": {
+            "x": 0,
+            "y": 2,
+            "z": 8
+          }
+        },
+        {
+          "Type": 7,
+          "Position": {
+            "x": 0,
+            "y": 3,
+            "z": 8
+          }
+        },
+        {
+          "Type": 6,
+          "Position": {
+            "x": 0,
+            "y": 4,
+            "z": 8
+          }
+        },
+        {
+          "Type": 5,
+          "Position": {
+            "x": 0,
+            "y": 5,
+            "z": 8
+          }
+        },
+        {
+          "Type": 4,
+          "Position": {
+            "x": 0,
+            "y": 6,
+            "z": 8
+          }
+        },
+        {
+          "Type": 3,
+          "Position": {
+            "x": 0,
+            "y": 7,
+            "z": 8
+          }
+        },
+        {
+          "Type": 2,
+          "Position": {
+            "x": 0,
+            "y": 8,
+            "z": 8
+          }
+        },
+        {
+          "Type": 1,
+          "Position": {
+            "x": 0,
+            "y": 9,
+            "z": 8
+          }
+        }
+    ]
+}

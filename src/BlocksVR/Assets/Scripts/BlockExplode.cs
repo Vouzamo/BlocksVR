@@ -6,11 +6,6 @@ public class BlockExplode : MonoBehaviour
     public float ExplosiveForce;
     public float Radius;
 
-    void Awake()
-    {
-        Invoke("Explode", Fuse);
-    }
-
     void OnCollisionEnter(Collision hit)
     {
         var target = hit.gameObject;

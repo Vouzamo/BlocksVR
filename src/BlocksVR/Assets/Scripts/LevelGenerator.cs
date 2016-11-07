@@ -22,6 +22,8 @@ public class LevelGenerator : MonoBehaviour
     public GameObject GrowBlock;
     public GameObject ShrinkBlock;
     public GameObject ExplodeBlock;
+    public GameObject IceBlock;
+    public GameObject RubberBlock;
     public GameObject Block;
 
     void Start()
@@ -99,13 +101,26 @@ public class LevelGenerator : MonoBehaviour
                     case BlockType.Explode:
                         block = (GameObject)Instantiate(ExplodeBlock, transform);
                         break;
+                    case BlockType.Ice:
+                        block = (GameObject)Instantiate(IceBlock, transform);
+                        break;
+                    case BlockType.Rubber:
+                        block = (GameObject)Instantiate(RubberBlock, transform);
+                        break;
                     default:
                         block = (GameObject)Instantiate(Block, transform);
                         break;
                 }
 
                 block.transform.localPosition = data.Position;
-                block.transform.localScale = new Vector3(1, 1, 1);
+                if(data.Scale != Vector3.zero)
+                {
+                    block.transform.localScale = data.Scale;
+                }
+                else
+                {
+                    block.transform.localScale = new Vector3(1, 1, 1);
+                }
             }
 
             // Resume time (and physics)

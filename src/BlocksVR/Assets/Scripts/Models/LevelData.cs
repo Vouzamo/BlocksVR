@@ -57,6 +57,8 @@ public enum BlockType
     Grow,
     Shrink,
     Explode,
+    Ice,
+    Rubber,
     Block
 }
 

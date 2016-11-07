@@ -11,14 +11,34 @@ public class BlockScale : MonoBehaviour
     void Awake()
     {
         canScale = true;
-        TargetScale = transform.lossyScale;
     }
 
     void FixedUpdate()
     {
-        if (transform.localScale != TargetScale)
+        if(canScale)
+        {
+            TargetScale = transform.localScale;
+        }
+        else if (transform.localScale != TargetScale)
         {
             transform.localScale = Vector3.Lerp(transform.localScale, TargetScale, Speed);
+
+            var position = transform.position;
+
+            var collisions = Physics.OverlapSphere(position, 5f);
+
+            foreach (Collider hit in collisions)
+            {
+                if (hit.tag == "Block")
+                {
+                    var rigidBody = hit.GetComponent<Rigidbody>();
+
+                    if (rigidBody != null)
+                    {
+                        rigidBody.WakeUp();
+                    }
+                }
+            }
         }
     }
 
